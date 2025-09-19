@@ -2,3 +2,23 @@
 
 /* App-wide base styles */
 :root { color-scheme: light; }
+
+
+.bg-blur {
+    @apply bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl
+}
+
+@font-face {
+    font-family: "Xirod";
+    /* SvelteKit serves static/ at the site root, so use an absolute path */
+    src: url('/fonts/Xirod.otf') format("opentype");
+    font-display: swap;
+}
+
+.font-xirod {
+    font-family: 'Xirod', sans-serif;
+}
+
+
+
+
