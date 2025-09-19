@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* App-wide base styles */
+:root { color-scheme: light; }
