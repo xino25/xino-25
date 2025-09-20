@@ -1,5 +1,6 @@
 <script>
     import { fly } from 'svelte/transition';
+    import { onMount, onDestroy } from 'svelte';
 
     import cryptbg from '$lib/assets/crypt_bg.png';
 
@@ -29,6 +30,7 @@
 
     let currentSponsorIndex = 0;
     let slideDirection = 0; // -1 for left, 1 for right, 0 for direct jump
+    let autoScrollInterval;
 
     function nextSponsor() {
         slideDirection = 1;
@@ -44,6 +46,19 @@
         slideDirection = index > currentSponsorIndex ? 1 : -1;
         currentSponsorIndex = index;
     }
+
+    // Auto-scroll functionality
+    onMount(() => {
+        autoScrollInterval = setInterval(() => {
+            nextSponsor();
+        }, 10000); // 10 seconds
+    });
+
+    onDestroy(() => {
+        if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+        }
+    });
 
 </script>
 

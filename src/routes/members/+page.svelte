@@ -1,6 +1,249 @@
 <script>
 	// Members page
+	import { onMount } from 'svelte';
+	
+	let currentView = 'members'; // 'members' or 'alumni'
+	let imageCache = new Map(); // Cache for preloaded images
+	let loadingStates = new Map(); // Track loading states
+
+	// Sample members data - replace with actual data
+	const members = [
+		// Core Team
+		{ name: 'Udbhav Jha', designation: 'President - Head Group Discussion' },
+		{ name: 'Vihaan Kulkarni', designation: 'President - Head Programming' },
+		{ name: 'Dhruv Dewan', designation: 'President - Head Development' },
+		{ name: 'Aarav Rajpal', designation: 'Vice President - Head Cubing' },
+		{ name: 'Avni Tiwari', designation: 'Vice President - Head Design (2D)' },
+		{ name: 'Laksh Kapoor', designation: 'Secretary - Head A/V' },
+		
+		// Heads of Departments
+		{ name: 'Rishit Narang', designation: 'Head Programming' },
+		{ name: 'Avi Rana', designation: 'Head Design (3D)' },
+		{ name: 'Tejas Jain', designation: 'Head Crossword' },
+		{ name: 'Ruhaan Gilautra', designation: 'Head Cryptic' },
+		{ name: 'Bhavya SK', designation: 'Head Quiz' },
+		
+		// Executive Members
+		{ name: 'Arnav Jain', designation: 'Executive Member' },
+		{ name: 'Mayank Swami', designation: 'Executive Member' },
+		{ name: 'Arnav Bhargava', designation: 'Executive Member' },
+		{ name: 'Akshar Gupta', designation: 'Executive Member' },
+		{ name: 'Harshit Malhotra', designation: 'Executive Member' },
+		{ name: 'Param Sen', designation: 'Executive Member' },
+		{ name: 'Rishit Soneja', designation: 'Executive Member' },
+	];
+
+	// Sample alumni data - replace with actual data
+	const alumni = [
+		// Batch 2024-25
+		{ name: "Anirudh Dabas", designation: "President - 24-25", image: "anirudh.jpg" },
+		{ name: "Akshatt Dahiya", designation: "Vice President - 24-25", image: "akshatt_n.png" },
+		
+		// Batch 2023-24
+		{ name: "Tijil Chabbra", designation: "President - 23-24", image: "tijil.png" },
+		{ name: "Aurum Mandal", designation: "President - 23-24", image: "aurum mandal.png" },
+		{ name: "Ekansh Arora", designation: "President - 23-24", image: "Ekaansh Arora.jpg" },
+		{ name: "Abhishree Bhardwaj", designation: "President - 23-24", image: "abhishree.jpg" },
+		{ name: "Nishchay Bhatia", designation: "Vice President - 23-24", image: "Nischay Bhatia.png" },
+		{ name: "Arnav Gupta", designation: "Vice President - 23-24", image: "Arnav Gupta.jpg" },
+		{ name: "Kriti Grover", designation: "Head Design - 23-24", image: "Kriti grover.png" },
+		{ name: "Yuvaan Mutreja", designation: "Head Hardware - 23-24", image: "yuvaan_3.png" },
+		
+		// Batch 2022-23
+		{ name: "Anant Gupta", designation: "President - 22-23", image: "anant.png" },
+		{ name: "Arnav Shukla", designation: "Head Hardware - 22-23", image: "arnav_shukla.png" },
+		
+		// Batch 2021-22
+		{ name: "Shaurya Bajaj", designation: "President - 21-22", image: "shaurya bajaj.png" },
+		{ name: "Manit Kaushik", designation: "President - 21-22", image: "manit kaushik.png" },
+		{ name: "Moaksh Kakkar", designation: "Vice President - 21-22", image: "moaksh kakkar.png" },
+		{ name: "Shaunak Sachdev", designation: "Vice President - 21-22", image: "shaunak sachdev.png" }
+	];
+
+	$: currentData = currentView === 'members' ? members : alumni;
+
+	function toggleView(view) {
+		currentView = view;
+	}
+
+	function getImageName(name) {
+		// Create mapping for known images
+		const imageMap = {
+			'Udbhav Jha': 'udbhav.jpg',
+			'Vihaan Kulkarni': 'vihaan_kulkarni.png',
+			'Dhruv Dewan': 'dhruv dewan_2.jpg',
+			'Aarav Rajpal': 'aarav_rajpal.jpg',
+			'Avni Tiwari': 'avni_tiwari.jpg',
+			'Laksh Kapoor': 'laksh.jpg',
+			'Rishit Narang': 'rishit_goat.jpg',
+			'Avi Rana': 'avi_rana.jpg',
+			'Tejas Jain': 'tejas_jain.jpg',
+			'Ruhaan Gilautra': 'ruhaan.jpg',
+			'Bhavya SK': 'bhavya_sk.jpg',
+			'Param Sen': 'param sen.png'
+		};
+		
+		return imageMap[name] || 'default.png';
+	}
+
+	function getAlumniImagePath(person) {
+		// For alumni, use the provided image filename
+		return person.image ? `/alumni/${person.image}` : '/alumni/default.png';
+	}
+
+	// Preload images for better performance
+	function preloadImage(src) {
+		if (imageCache.has(src)) {
+			return Promise.resolve(imageCache.get(src));
+		}
+		
+		return new Promise((resolve, reject) => {
+			const img = new Image();
+			img.onload = () => {
+				imageCache.set(src, img);
+				resolve(img);
+			};
+			img.onerror = () => {
+				reject(new Error(`Failed to load image: ${src}`));
+			};
+			img.src = src;
+		});
+	}
+
+	// Preload all images on component mount
+	onMount(async () => {
+		const allImages = [];
+		
+		// Preload member images
+		members.forEach(member => {
+			allImages.push(`/members/${getImageName(member.name)}`);
+		});
+		
+		// Preload alumni images
+		alumni.forEach(person => {
+			allImages.push(getAlumniImagePath(person));
+		});
+		
+		// Add default images
+		allImages.push('/members/default.png');
+		
+		// Preload all images in background
+		allImages.forEach(src => {
+			preloadImage(src).catch(() => {
+				// Silently handle preload failures
+			});
+		});
+	});
+
+	// Enhanced image loading with cache
+	function getImageSrc(person) {
+		const src = currentView === 'members' 
+			? `/members/${getImageName(person.name)}` 
+			: getAlumniImagePath(person);
+		
+		// Return cached image if available, otherwise return src for normal loading
+		return imageCache.has(src) ? src : src;
+	}
 </script>
 
-<h1 class="text-3xl font-semibold mb-4">Members</h1>
-<p class="text-gray-700">Meet the team behind XINO '25.</p>
+<div class="min-h-screen p-6">
+
+
+	<!-- Toggle Switch with External Labels -->
+	<div class="flex justify-center items-center gap-2 mb-12" >
+		<!-- Members Label -->
+		<button 
+			class="text-lg font-medium transition-colors duration-300 px-4 py-2 cursor-pointer"
+			class:text-white={currentView === 'members'}
+			class:text-gray-400={currentView === 'alumni'}
+			on:click={() => currentView = 'members'}
+		>
+			Members
+		</button>
+		
+		<!-- Toggle Switch Body -->
+		<div 
+			class="relative bg-gray-700 rounded-full w-16 h-8 cursor-pointer"
+			role="button"
+			tabindex="0"
+			on:click={() => currentView = currentView === 'members' ? 'alumni' : 'members'}
+			on:keydown={(e) => e.key === 'Enter' && (currentView = currentView === 'members' ? 'alumni' : 'members')}
+		>
+			<!-- Sliding Knob -->
+			<div 
+				class="absolute top-1 left-1 w-6 h-6 bg-green-500 rounded-full shadow-lg transition-transform duration-300 ease-in-out"
+				class:translate-x-8={currentView === 'alumni'}
+			></div>
+		</div>
+		
+		<!-- Alumni Label -->
+		<button 
+			class="text-lg font-medium transition-colors duration-300 px-4 py-2 cursor-pointer"
+			class:text-white={currentView === 'alumni'}
+			class:text-gray-400={currentView === 'members'}
+			on:click={() => currentView = 'alumni'}
+		>
+			Alumni
+		</button>
+	</div>
+
+	<!-- Members/Alumni Grid -->
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
+		{#each currentData as person, index}
+			<div 
+				class="bg-blur p-8 rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-xl group"
+				data-aos="fade-up"
+				data-aos-delay="{index * 50}"
+			>
+				<!-- Avatar with Image -->
+				<div 
+					class="w-3/4 h-auto aspect-square max-w-64 rounded-xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 overflow-hidden shadow-xl will-change-transform bg-black"
+				>
+					<img 
+						src="{getImageSrc(person)}" 
+						alt="{person.name}"
+						class="w-full h-full object-cover rounded-lg transform-gpu opacity-100"
+						loading="lazy"
+						decoding="async"
+						on:error={(e) => {
+							// Enhanced error handling with proper fallback
+							const defaultSrc = currentView === 'members' ? '/members/default.png' : '/alumni/default.png';
+							if (e.target.src !== defaultSrc) {
+								e.target.src = defaultSrc;
+							}
+						}}
+					/>
+				</div>
+
+				
+				<!-- Person Info -->
+				<div class="text-center">
+					<h3 class="text-white font-semibold text-xl mb-3 group-hover:text-green-300 transition-colors duration-300">
+						{person.name}
+					</h3>
+					<p class="text-white/70 text-base font-medium">
+						{person.designation}
+					</p>
+				</div>
+			</div>
+		{/each}
+	</div>
+
+	<!-- Empty State -->
+	{#if currentData.length === 0}
+		<div class="text-center py-16">
+			<div class="bg-blur rounded-lg p-8 max-w-md mx-auto">
+				<h3 class="text-white text-xl font-semibold mb-2">No {currentView} found</h3>
+				<p class="text-white/70">Check back later for updates.</p>
+			</div>
+		</div>
+	{/if}
+</div>
+
+<style>
+	/* Ensure member images are fully opaque */
+	img {
+		opacity: 1 !important;
+	}
+</style>
+
