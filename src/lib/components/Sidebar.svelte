@@ -20,11 +20,6 @@
             name: "ProDot",
             logo: prodotLogo,
             link: "https://www.prodotgroup.com/"
-        },
-        {
-            name: "XYZ",
-            logo: xyzLogo,
-            link: "https://gen.xyz/"
         }
     ];
 
@@ -51,7 +46,7 @@
     onMount(() => {
         autoScrollInterval = setInterval(() => {
             nextSponsor();
-        }, 10000); // 10 seconds
+        }, 5000); // 10 seconds
     });
 
     onDestroy(() => {
@@ -148,7 +143,7 @@
                 XINO <span class="text-green-700">'25</span>
             </span>
             <span class="text-xl text-white/80">
-                With <span class="font-bold text-blue-500">AutoMeta</span>
+                With <span class="font-bold">AutoMeta</span>
             </span>
         </p>
         <span class="text-sm text-white/60 block text-center mt-2">

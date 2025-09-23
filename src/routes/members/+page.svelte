@@ -9,55 +9,55 @@
 	// Sample members data - replace with actual data
 	const members = [
 		// Core Team
-		{ name: 'Udbhav Jha', designation: 'President - Head Group Discussion' },
-		{ name: 'Vihaan Kulkarni', designation: 'President - Head Programming' },
-		{ name: 'Dhruv Dewan', designation: 'President - Head Development' },
-		{ name: 'Aarav Rajpal', designation: 'Vice President - Head Cubing' },
-		{ name: 'Avni Tiwari', designation: 'Vice President - Head Design (2D)' },
-		{ name: 'Laksh Kapoor', designation: 'Secretary - Head A/V' },
-		
+		{ name: 'Udbhav Jha', designation: 'President' },
+		{ name: 'Vihaan Kulkarni', designation: 'President' },
+		{ name: 'Aarav Rajpal', designation: 'Vice President' },
+		{ name: 'Avni Tiwari', designation: 'Vice President' },
+
 		// Heads of Departments
 		{ name: 'Rishit Narang', designation: 'Head Programming' },
-		{ name: 'Avi Rana', designation: 'Head Design (3D)' },
-		{ name: 'Tejas Jain', designation: 'Head Crossword' },
+		{ name: 'Dhruv Dewan', designation: 'Head Development' },
 		{ name: 'Ruhaan Gilautra', designation: 'Head Cryptic' },
+		{ name: 'Arnav Bhargava', designation: 'Head Surprise' },
+		{ name: 'Laksh Kapoor', designation: 'Head A/V' },
+		// { name: 'Arul Gandhi', designation: 'Head Hardware' },
 		{ name: 'Bhavya SK', designation: 'Head Quiz' },
+		{ name: 'Param Sen', designation: 'Head Crossword' },
+		{ name: 'Akshar Gupta', designation: 'Head Machine Learning' },
 		
-		// Executive Members
-		{ name: 'Arnav Jain', designation: 'Executive Member' },
-		{ name: 'Mayank Swami', designation: 'Executive Member' },
-		{ name: 'Arnav Bhargava', designation: 'Executive Member' },
-		{ name: 'Akshar Gupta', designation: 'Executive Member' },
-		{ name: 'Harshit Malhotra', designation: 'Executive Member' },
-		{ name: 'Param Sen', designation: 'Executive Member' },
-		{ name: 'Rishit Soneja', designation: 'Executive Member' },
+		// Members
+		{ name: 'Rishit Soneja', designation: 'Member' },
+		{ name: 'Harshit Malhotra', designation: 'Member' },
+		{ name: 'Arnav Jain', designation: 'Member' },
+		{ name: 'Mayank Swami', designation: 'Member' },
+		{ name: 'Archita Tiwari', designation: 'Member' },
 	];
 
 	// Sample alumni data - replace with actual data
 	const alumni = [
 		// Batch 2024-25
-		{ name: "Anirudh Dabas", designation: "President - 24-25", image: "anirudh.jpg" },
-		{ name: "Akshatt Dahiya", designation: "Vice President - 24-25", image: "akshatt_n.png" },
+		{ name: "Anirudh Dabas", designation: "President 24-25", image: "anirudh.jpg" },
+		{ name: "Akshatt Dahiya", designation: "Vice President 24-25", image: "akshatt_n.png" },
 		
 		// Batch 2023-24
-		{ name: "Tijil Chabbra", designation: "President - 23-24", image: "tijil.png" },
-		{ name: "Aurum Mandal", designation: "President - 23-24", image: "aurum mandal.png" },
-		{ name: "Ekansh Arora", designation: "President - 23-24", image: "Ekaansh Arora.jpg" },
-		{ name: "Abhishree Bhardwaj", designation: "President - 23-24", image: "abhishree.jpg" },
-		{ name: "Nishchay Bhatia", designation: "Vice President - 23-24", image: "Nischay Bhatia.png" },
-		{ name: "Arnav Gupta", designation: "Vice President - 23-24", image: "Arnav Gupta.jpg" },
-		{ name: "Kriti Grover", designation: "Head Design - 23-24", image: "Kriti grover.png" },
-		{ name: "Yuvaan Mutreja", designation: "Head Hardware - 23-24", image: "yuvaan_3.png" },
-		
+		{ name: "Tijil Chabbra", designation: "President 23-24", image: "tijil.png" },
+		{ name: "Aurum Mandal", designation: "President 23-24", image: "aurum mandal.png" },
+		{ name: "Ekansh Arora", designation: "President 23-24", image: "Ekaansh Arora.jpg" },
+		{ name: "Abhishree Bhardwaj", designation: "President 23-24", image: "abhishree.jpg" },
+		{ name: "Nishchay Bhatia", designation: "Vice President 23-24", image: "Nischay Bhatia.png" },
+		{ name: "Arnav Gupta", designation: "Vice President 23-24", image: "Arnav Gupta.jpg" },
+		{ name: "Kriti Grover", designation: "Head Design 23-24", image: "Kriti grover.png" },
+		{ name: "Yuvaan Mutreja", designation: "Head Hardware 23-24", image: "yuvaan_3.png" },
+
 		// Batch 2022-23
-		{ name: "Anant Gupta", designation: "President - 22-23", image: "anant.png" },
-		{ name: "Arnav Shukla", designation: "Head Hardware - 22-23", image: "arnav_shukla.png" },
-		
+		{ name: "Anant Gupta", designation: "President 22-23", image: "anant.png" },
+		{ name: "Arnav Shukla", designation: "Head Hardware 22-23", image: "arnav_shukla.png" },
+
 		// Batch 2021-22
-		{ name: "Shaurya Bajaj", designation: "President - 21-22", image: "shaurya bajaj.png" },
-		{ name: "Manit Kaushik", designation: "President - 21-22", image: "manit kaushik.png" },
-		{ name: "Moaksh Kakkar", designation: "Vice President - 21-22", image: "moaksh kakkar.png" },
-		{ name: "Shaunak Sachdev", designation: "Vice President - 21-22", image: "shaunak sachdev.png" }
+		{ name: "Shaurya Bajaj", designation: "President 21-22", image: "shaurya bajaj.png" },
+		{ name: "Manit Kaushik", designation: "President 21-22", image: "manit kaushik.png" },
+		{ name: "Moaksh Kakkar", designation: "Vice President 21-22", image: "moaksh kakkar.png" },
+		{ name: "Shaunak Sachdev", designation: "Vice President 21-22", image: "shaunak sachdev.png" }
 	];
 
 	$: currentData = currentView === 'members' ? members : alumni;
@@ -80,7 +80,9 @@
 			'Tejas Jain': 'tejas_jain.jpg',
 			'Ruhaan Gilautra': 'ruhaan.jpg',
 			'Bhavya SK': 'bhavya_sk.jpg',
-			'Param Sen': 'param sen.png'
+			'Param Sen': 'param sen.png',
+			'Harshit Malhotra': 'harshit.jpg',
+			'Mayank Swami': 'mayank.jpg',
 		};
 		
 		return imageMap[name] || 'default.png';
@@ -193,7 +195,7 @@
 			<div 
 				class="bg-blur p-8 rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-xl group"
 				data-aos="fade-up"
-				data-aos-delay="{index * 50}"
+				data-aos-delay="{index * 30}"
 			>
 				<!-- Avatar with Image -->
 				<div 
