@@ -80,9 +80,9 @@
 			'Tejas Jain': 'tejas_jain.jpg',
 			'Ruhaan Gilautra': 'ruhaan.jpg',
 			'Bhavya SK': 'bhavya_sk.jpg',
-			'Param Sen': 'param sen.png',
 			'Harshit Malhotra': 'harshit.jpg',
 			'Mayank Swami': 'mayank.jpg',
+			'Akshar Gupta': 'akshar.jpeg',
 		};
 		
 		return imageMap[name] || 'default.png';
