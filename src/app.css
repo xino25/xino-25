@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* App-wide base styles */
+:root { color-scheme: light; }
+
+/* Global text selection prevention */
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Allow selection for input and textarea elements */
+input, textarea, [contenteditable="true"] {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+}
+
+.bg-blur {
+    @apply bg-white/10 backdrop-blur-lg rounded-2xl shadow-xl
+}
+
+button {
+    @apply cursor-pointer
+}
+
+@font-face {
+    font-family: "Xirod";
+    /* SvelteKit serves static/ at the site root, so use an absolute path */
+    src: url('/fonts/Xirod.otf') format("opentype");
+    font-display: swap;
+}
+
+.font-xirod {
+    font-family: 'Xirod', sans-serif;
+}
+
+
+
+
