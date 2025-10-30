@@ -188,7 +188,7 @@
                                 XCRYPT
                             </span>
                             <span class="text-sm text-white/75 block text-center mt-2   ">
-                                7th November - 8th November
+                                6th November - 7th November
                             </span>
             </div>
 

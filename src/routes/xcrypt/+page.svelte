@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	
-	const url = 'https://forms.gle/mnjtFEjTb7xPWTs88';
+	const url = 'https://xcrypt.xino.in';
 	
 	onMount(() => {
 		window.location.href = url;

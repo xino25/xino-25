@@ -143,8 +143,8 @@
 			
 			<!-- Left Card - XINO x AutoMeta 2025 -->
 			<div class="bg-blur p-8 rounded-xl text-center w-full flex flex-col items-center justify-center">
-				<h2 class="text-white text-3xl font-bold mb-4">
-					XINO x AutoMeta 2025
+				<h2 class="text-white text-3xl font-bold mb-4 font-xirod">
+					XINO 2025
 				</h2>
 				<p class="text-white/80 text-xl mb-8">
 					13th November 2025
@@ -167,7 +167,7 @@
 						XCrypt 2025
 					</h2>
 					<p class="text-white/80 text-lg mb-8">
-						11:00AM, 7th November 2025 - 11:00PM, 8th November 2025
+						11:00AM, 6th November 2025 - 11:00PM, 7th November 2025
 					</p>
 					<div class="flex gap-4 justify-center">
 						<a class="bg-emerald-600 hover:bg-emerald-700 hover:scale-105 text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 flex justify-center items-center" href="/xcrypt">
@@ -226,7 +226,7 @@
 							target="_blank"
 							class="flex items-center gap-3 text-white no-underline hover:bg-white/10 rounded-lg px-2 py-4 transition-colors"
 						>
-							<div class="text-xl text-emerald-400 flex items-center justify-center">
+							<div class="text-xl text-emerald-400 flex items-center justify-center px-2">
 									<ion-icon name={download.icon}></ion-icon>
 							</div>
 							<span>{download.label}</span>
