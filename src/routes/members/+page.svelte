@@ -22,7 +22,6 @@
 
 		// Heads of Departments
 		{ name: 'Rishit Narang', designation: 'Head Programming' },
-		{ name: 'Dhruv Dewan', designation: 'Head Development' },
 		{ name: 'Arnav Bhargava', designation: 'Head Surprise' },
  		// { name: 'Arul Gandhi', designation: 'Head Hardware' },
 		 { name: 'Bhavya SK', designation: 'Head Quiz' },
@@ -89,7 +88,8 @@
 			'Akshar Gupta': 'akshar.jpeg',
 			'Arnav Jain': 'arnav jain.jpeg',
 			'Arnav Bhargava': 'arnav bhargava.jpg',
-			'Param Sen': 'param sen.jpg'
+			'Param Sen': 'param sen.jpg',
+			'Archita Tiwari': 'archita.jpg'
 		};
 		
 		return imageMap[name] || 'default.png';
@@ -156,21 +156,22 @@
 	</div>
 
 	<!-- Members/Alumni Grid -->
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-6xl mx-auto">
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 max-w-6xl mx-auto">
 		{#each currentData as person, index}
 			<div 
-				class="bg-blur rounded-lg hover:scale-105 transition-all duration-300 hover:shadow-xl group overflow-hidden"
+				class="bg-blur rounded-lg hover:scale-105 transition-all hover:shadow-xl group overflow-hidden"
 				data-aos="fade-up"
 				data-aos-delay="{index * 30}"
 			>
 				<!-- Avatar with Image and Text Overlay -->
+				 <!-- image transition control -->
 				<div 
-					class="w-full h-auto aspect-[4/5] rounded-lg group-hover:scale-105 transition-all duration-500 ease-out overflow-hidden shadow-xl will-change-transform bg-black relative"
+					class="w-full h-auto aspect-[4/5] rounded-lg group-hover:scale-105 transition-all duration-400 ease-out overflow-hidden shadow-xl will-change-transform bg-black relative pb-8"
 				>
 					<img 
 						src="{getImageSrc(person)}" 
 						alt="{person.name}"
-						class="w-full h-full object-cover rounded-lg transform-gpu opacity-100 group-hover:scale-110 transition-transform duration-700 ease-out"
+						class="w-full h-full object-cover rounded-lg transform-gpu opacity-100 group-hover:scale-110 transition-transform duration-500 ease-out"
 						loading="lazy"
 						decoding="async"
 						on:error={(e) => {
@@ -186,7 +187,7 @@
 					<div class="progressive-blur-overlay absolute inset-0 rounded-lg overflow-hidden"></div>
 					
 					<!-- Person Info Overlay -->
-					<div class="absolute bottom-0 left-0 right-0 p-3 text-center z-10 group-hover:translate-y-0 translate-y-1 transition-transform duration-500 ease-out">
+					<div class="absolute bottom-0 left-0 right-0 p-3 text-center z-10 group-hover:-translate-y-2 -translate-y-3 transition-transform duration-500 ease-out">
 						<h3 class="text-emerald-400 font-semibold text-lg mb-1 group-hover:text-emerald-300 group-hover:scale-105 transition-all duration-500 ease-out drop-shadow-lg">
 							{person.name}
 						</h3>
