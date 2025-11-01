@@ -11,99 +11,107 @@
 		// Creative Events
 		{
 			name: "Xquisite",
-			description: "All-round creative hackathon and design challenge testing participants' skills in various domains",
+			description: "Classic event converging entrepreneurship, development, and design. Conceptualize and pitch a product with working prototype, UI/UX, 2D/3D designs, and A/V submission",
 			type: "Creative",
-			keywords: ["creative", "hackathon", "design", "web dev", "UI/UX"]
+			keywords: ["creative", "entrepreneurship", "product", "prototype", "UI/UX", "design", "development", "presentation", "hackathon"]
 		},
 		
 		// Discussion Events
 		{
 			name: "Xclamation Point!",
-			description: "Group discussion and debate competition",
+			description: "Colossal clash of ideas and opinions through group discussion. Present arguments with clarity, structure, and originality via video submissions",
 			type: "Discussion",
-			keywords: ["discussion", "gd", "grp"]
+			keywords: ["group discussion", "debate", "ideas", "opinions", "arguments", "speech", "video submission", "innovation"]
 		},
 		
 		// Programming Events
 		{
 			name: "eXecute.eXe",
-			description: "Competitive programming challenge on hackerrank",
+			description: "Test your programming skills and algorithmic knowledge. Heated competitive programming clash on Hackerrank judged on efficiency and speed",
 			type: "Programming",
-			keywords: ["programming", "coding", "competitive", "cp", "dsa"]
+			keywords: ["competitive programming", "algorithms", "hackerrank", "coding", "DSA", "efficiency", "logic", "cp"]
 		},
 		
 		// Surprise Events
 		{
 			name: "Xclusive",
-			description: "Mystery surprise event ",
+			description: "Expect the unexpected! Mystery surprise event with online prelims determining 6 teams for offline finals",
 			type: "Surprise",
-			keywords: ["surprise", "mystery", "exclusive", "unexpected", "challenge"]
+			keywords: ["surprise", "mystery", "unexpected", "exclusive", "challenge", "prelims"]
 		},
 		
 		// Quiz Events
 		{
 			name: "techXult Jr.",
-			description: "Junior level technology quiz competition",
+			description: "Junior level technology quiz for grades VIII-X. Online prelims with top 6 teams advancing to offline finals",
 			type: "Quiz",
-			keywords: ["quiz", "junior"]
+			keywords: ["quiz", "junior", "technology", "VIII-X", "knowledge", "trivia", "prelims"]
 		},
 		{
 			name: "techXult Sr.",
-			description: "Senior level technology quiz competition",
+			description: "Senior level technology quiz for grades XI-XII. Online prelims with top 6 teams advancing to offline finals",
 			type: "Quiz", 
-			keywords: ["quiz", "senior"]
+			keywords: ["quiz", "senior", "technology", "XI-XII", "knowledge", "trivia", "prelims"]
 		},
 		
 		// Cube Solving Events
 		{
 			name: "XCube 2x2",
-			description: "2x2 Rubik's cube solving competition",
+			description: "Solve your way to victory! 2x2 Rubik's cube speed solving competition with online prelims and top 12 advancing to offline finals",
 			type: "Cubing",
-			keywords: ["cube", "2x2", "rubiks", "solving", "puzzle", "cubing"]
+			keywords: ["cube", "2x2", "rubiks", "speed solving", "puzzle", "cubing", "competition"]
 		},
 		{
 			name: "XCube 3x3",
-			description: "3x3 Rubik's cube solving competition",
+			description: "Solve your way to victory! 3x3 Rubik's cube speed solving competition with online prelims and top 12 advancing to offline finals",
 			type: "Cubing",
-			keywords: ["cube", "3x3", "rubiks", "solving", "cubing", "puzzle"]
+			keywords: ["cube", "3x3", "rubiks", "speed solving", "cubing", "puzzle", "competition"]
 		},
 		{
 			name: "XCube Pyraminx",
-			description: "Pyraminx cube solving competition",
+			description: "Solve your way to victory! Pyraminx speed solving competition with online prelims and top 12 advancing to offline finals",
 			type: "Cubing",
-			keywords: ["cube", "pyraminx", "solving", "cubing", "puzzle"]
+			keywords: ["cube", "pyraminx", "speed solving", "cubing", "puzzle", "competition"]
 		},
 		
 		// Film Making Events
 		{
 			name: "XFrame",
-			description: "Online film making competition",
+			description: "Stories find their screen! Create films up to 5 minutes bringing imagination alive. Judged on creativity, relevance, and originality",
 			type: "Film Making",
-			keywords: ["film", "making", "video", "online", "creative"]
+			keywords: ["film making", "video", "cinematography", "creativity", "storytelling", "originality", "short film"]
 		},
 		
 		// Robotics Events
 		{
-			name: "autoForge",
-			description: "Robothon - robotics design and automation challenge",
+			name: "autoTrack",
+			description: "Build autonomous line follower bot to navigate tracks with speed and accuracy. ",
 			type: "Robotics",
-			keywords: ["robotics", "automation", "robothon", "engineering", "hardware"]
+			keywords: ["robotics", "line follower", "autonomous", "bot", "engineering", "hardware", "automation", "speed"]
 		},
 		
 		// Machine Learning Events
 		{
 			name: "autoCognito",
-			description: "Online machine learning and AI challenge",
+			description: "Build AI/ML-powered bot to master custom game. Train, tune, and optimize your model through logic and learning to outsmart opponents",
 			type: "Machine Learning",
-			keywords: ["machine", "learning", "AI", "artificial", "intelligence", "online", "data"]
+			keywords: ["machine learning", "AI", "artificial intelligence", "bot", "game", "training", "optimization", "strategy"]
 		},
 		
 		// Cryptic Hunt Events
 		{
 			name: "XCrypt",
-			description: "Cryptic hunt",
+			description: "Dive into mystery, solve intricate puzzles, and prove your mettle. Unlock secrets and become the ultimate Cryptic Hunt champion",
 			type: "Cryptic Hunt",
-			keywords: ["cryptic", "hunt", "puzzles", "clues", "mystery", "solving"]
+			keywords: ["cryptic", "hunt", "puzzles", "mystery", "clues", "solving", "secrets", "riddles"]
+		},
+		
+		// Photography Events
+		{
+			name: "XPosure",
+			description: "Capture stories in a single frame. Freeze imagination, emotion, and perspective through the lens with creative photography",
+			type: "Photography",
+			keywords: ["photography", "camera", "creative", "artistic", "visual", "composition", "storytelling", "imagery"]
 		}
 	];
 
@@ -180,7 +188,7 @@
 </div>
 
 <!-- Events Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 	{#each filteredEvents as event (event.name)}
 		<div 
 			class="relative bg-blur rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer group flex flex-col"
@@ -194,7 +202,7 @@
 			</div>
 			
 			<!-- Content Overlay -->
-			<div class="relative p-6 h-48 flex flex-col justify-center">
+			<div class="relative p-6 h-56 flex flex-col justify-center">
 				<h3 class="text-white text-xl font-bold mb-2">
 					{event.name}
 				</h3>

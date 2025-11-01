@@ -195,7 +195,7 @@
             <div class="flex items-center justify-center">
              
             <a 
-                href="/xcrypt"  
+                href="/xcryptreg"  
                 target="_blank"
                 class="mt-4 ml-4 px-4 py-2 bg-white/20   hover:bg-white/30 rounded-full text-white text-sm transition-all duration-200 hover:scale-105"
             >

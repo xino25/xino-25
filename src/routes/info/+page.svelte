@@ -170,7 +170,7 @@
 						11:00AM, 6th November 2025 - 11:00PM, 7th November 2025
 					</p>
 					<div class="flex gap-4 justify-center">
-						<a class="bg-emerald-600 hover:bg-emerald-700 hover:scale-105 text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 flex justify-center items-center" href="/xcrypt">
+						<a class="bg-emerald-600 hover:bg-emerald-700 hover:scale-105 text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 flex justify-center items-center" href="/xcryptreg">
 							Register
 						</a>
 						<a class="border border-white/50 hover:border-white hover:scale-105 text-white px-6 py-2 rounded-4xl font-semibold transition-all duration-300 flex justify-center items-center" href="https://xcrypt.xino.in/">
