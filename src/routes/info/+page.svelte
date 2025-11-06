@@ -44,12 +44,12 @@
 		},
 		{
 			label: "Invite - XCrypt25", 
-			href: "/xrcyptdc",
+			href: "/xcrypt25",
 			icon: "cloud-download-outline"
 		},
 		{
 			label: "X-Crypt discord",
-			href: "/xrcyptdc",
+			href: "/xcryptdc",
 			icon: "open-outline"
 		}
 	];
