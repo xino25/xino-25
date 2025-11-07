@@ -3,6 +3,30 @@
 /* App-wide base styles */
 :root { color-scheme: light; }
 
+/* Custom Scrollbar Styles */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #10b981 transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #059669;
+}
+
 /* Global text selection prevention */
 * {
     user-select: none;

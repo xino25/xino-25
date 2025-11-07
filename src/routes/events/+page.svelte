@@ -4,7 +4,7 @@
 
 <script>
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	
 	// Events data structure
 	const events = [
@@ -13,7 +13,12 @@
 			name: "Xquisite",
 			description: "Classic event converging entrepreneurship, development, and design. Conceptualize and pitch a product with working prototype, UI/UX, 2D/3D designs, and A/V submission",
 			type: "Creative",
-			keywords: ["creative", "entrepreneurship", "product", "prototype", "UI/UX", "design", "development", "presentation", "hackathon"]
+			keywords: ["creative", "entrepreneurship", "product", "prototype", "UI/UX", "design", "development", "presentation", "hackathon"],
+			eligibility: "IX-XII",
+			teamSize: "4",
+			fullDescription: "Xquisite is our flagship event that brings together entrepreneurship, development, and design. Teams must conceptualize and pitch an innovative product complete with a working prototype, UI/UX designs, 2D/3D models, and audio-visual presentation.",
+			prelimsDetails: null,
+			prelimsBrochureLink: "https://docs.google.com/document/d/1yl71rOPIOMnIlx790T-a-vtFFA1AlNiu9C6wWbyO0sw/edit?usp=sharing"
 		},
 		
 		// Discussion Events
@@ -21,7 +26,12 @@
 			name: "Xclamation Point!",
 			description: "Colossal clash of ideas and opinions through group discussion. Present arguments with clarity, structure, and originality via video submissions",
 			type: "Discussion",
-			keywords: ["group discussion", "debate", "ideas", "opinions", "arguments", "speech", "video submission", "innovation"]
+			keywords: ["group discussion", "debate", "ideas", "opinions", "arguments", "speech", "video submission", "innovation"],
+			eligibility: "IX-XII",
+			teamSize: "1",
+			fullDescription: "A dynamic group discussion event where teams engage in intellectual debates on contemporary topics. Showcase your argumentative skills, critical thinking, and presentation abilities through structured video submissions.",
+			prelimsDetails: null,
+			prelimsBrochureLink: "https://docs.google.com/document/d/13ubWDg99Pe95ARQnxC3lpY0jROIunbozNVJaffYeWRM/edit?usp=sharing"
 		},
 		
 		// Programming Events
@@ -29,7 +39,12 @@
 			name: "eXecute.eXe",
 			description: "Test your programming skills and algorithmic knowledge. Heated competitive programming clash on Hackerrank judged on efficiency and speed",
 			type: "Programming",
-			keywords: ["competitive programming", "algorithms", "hackerrank", "coding", "DSA", "efficiency", "logic", "cp"]
+			keywords: ["competitive programming", "algorithms", "hackerrank", "coding", "DSA", "efficiency", "logic", "cp"],
+			eligibility: "VIII-XII",
+			teamSize: "1",
+			fullDescription: "Put your coding skills to the ultimate test in this competitive programming challenge. Solve complex algorithmic problems on HackerRank, where every second counts and efficiency matters.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		
 		// Surprise Events
@@ -37,7 +52,12 @@
 			name: "Xclusive",
 			description: "Expect the unexpected! Mystery surprise event with online prelims determining 6 teams for offline finals",
 			type: "Surprise",
-			keywords: ["surprise", "mystery", "unexpected", "exclusive", "challenge", "prelims"]
+			keywords: ["surprise", "mystery", "unexpected", "exclusive", "challenge", "prelims"],
+			eligibility: "IX-XII",
+			teamSize: "2",
+			fullDescription: "The ultimate mystery event where anything can happen! Details will be revealed closer to the event date. Prepare for the unexpected and showcase your versatility.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		
 		// Quiz Events
@@ -45,13 +65,23 @@
 			name: "techXult Jr.",
 			description: "Junior level technology quiz for grades VIII-X. Online prelims with top 6 teams advancing to offline finals",
 			type: "Quiz",
-			keywords: ["quiz", "junior", "technology", "VIII-X", "knowledge", "trivia", "prelims"]
+			keywords: ["quiz", "junior", "technology", "VIII-X", "knowledge", "trivia", "prelims"],
+			eligibility: "VIII-X",
+			teamSize: "2",
+			fullDescription: "A comprehensive technology quiz designed for junior students. Test your knowledge across various domains of computer science, technology trends, and digital innovations.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		{
 			name: "techXult Sr.",
 			description: "Senior level technology quiz for grades XI-XII. Online prelims with top 6 teams advancing to offline finals",
 			type: "Quiz", 
-			keywords: ["quiz", "senior", "technology", "XI-XII", "knowledge", "trivia", "prelims"]
+			keywords: ["quiz", "senior", "technology", "XI-XII", "knowledge", "trivia", "prelims"],
+			eligibility: "XI-XII",
+			teamSize: "2",
+			fullDescription: "An advanced technology quiz for senior students covering in-depth topics in computer science, emerging technologies, programming concepts, and tech industry knowledge.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		
 		// Cube Solving Events
@@ -59,19 +89,34 @@
 			name: "XCube 2x2",
 			description: "Solve your way to victory! 2x2 Rubik's cube speed solving competition with online prelims and top 12 advancing to offline finals",
 			type: "Cubing",
-			keywords: ["cube", "2x2", "rubiks", "speed solving", "puzzle", "cubing", "competition"]
+			keywords: ["cube", "2x2", "rubiks", "speed solving", "puzzle", "cubing", "competition"],
+			eligibility: "Open",
+			teamSize: "1",
+			fullDescription: "Speed cubing competition featuring the 2x2 Rubik's cube. Demonstrate your solving speed and technique in this individual competition.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		{
 			name: "XCube 3x3",
 			description: "Solve your way to victory! 3x3 Rubik's cube speed solving competition with online prelims and top 12 advancing to offline finals",
 			type: "Cubing",
-			keywords: ["cube", "3x3", "rubiks", "speed solving", "cubing", "puzzle", "competition"]
+			keywords: ["cube", "3x3", "rubiks", "speed solving", "cubing", "puzzle", "competition"],
+			eligibility: "Open",
+			teamSize: "1",
+			fullDescription: "The classic 3x3 Rubik's cube speed solving competition. Show off your algorithms and finger tricks to secure the fastest times.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		{
 			name: "XCube Pyraminx",
 			description: "Solve your way to victory! Pyraminx speed solving competition with online prelims and top 12 advancing to offline finals",
 			type: "Cubing",
-			keywords: ["cube", "pyraminx", "speed solving", "cubing", "puzzle", "competition"]
+			keywords: ["cube", "pyraminx", "speed solving", "cubing", "puzzle", "competition"],
+			eligibility: "Open",
+			teamSize: "1",
+			fullDescription: "Pyraminx speed solving competition. Master this unique triangular puzzle and compete for the best times.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		
 		// Film Making Events
@@ -79,7 +124,12 @@
 			name: "XFrame",
 			description: "Stories find their screen! Create films up to 5 minutes bringing imagination alive. Judged on creativity, relevance, and originality",
 			type: "Film Making",
-			keywords: ["film making", "video", "cinematography", "creativity", "storytelling", "originality", "short film"]
+			keywords: ["film making", "video", "cinematography", "creativity", "storytelling", "originality", "short film"],
+			eligibility: "IX-XII",
+			teamSize: "4",
+			fullDescription: "Unleash your creativity through the art of filmmaking. Create a compelling short film that tells a story, evokes emotions, and showcases your cinematographic skills.",
+			prelimsDetails: null,
+			prelimsBrochureLink: "https://docs.google.com/document/d/10QOLoxOYT6ro4k2GGuhZ-sKLn7aXYiM4XrNjhbSsM_0/edit?usp=sharing"
 		},
 		
 		// Robotics Events
@@ -87,7 +137,12 @@
 			name: "autoTrack",
 			description: "Build autonomous line follower bot to navigate tracks with speed and accuracy. ",
 			type: "Robotics",
-			keywords: ["robotics", "line follower", "autonomous", "bot", "engineering", "hardware", "automation", "speed"]
+			keywords: ["robotics", "line follower", "autonomous", "bot", "engineering", "hardware", "automation", "speed"],
+			eligibility: "VIII-XII",
+			teamSize: "2",
+			fullDescription: "Design and build an autonomous line-following robot that can navigate complex tracks with precision and speed. Test your engineering and programming skills in robotics.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		
 		// Machine Learning Events
@@ -95,7 +150,12 @@
 			name: "autoCognito",
 			description: "Build AI/ML-powered bot to master custom game. Train, tune, and optimize your model through logic and learning to outsmart opponents",
 			type: "Machine Learning",
-			keywords: ["machine learning", "AI", "artificial intelligence", "bot", "game", "training", "optimization", "strategy"]
+			keywords: ["machine learning", "AI", "artificial intelligence", "bot", "game", "training", "optimization", "strategy"],
+			eligibility: "VIII-XII",
+			teamSize: "2",
+			fullDescription: "Create an AI-powered bot that learns and adapts to master a custom game. Apply machine learning algorithms, train your model, and compete against other AI bots.",
+			prelimsDetails: null,
+			prelimsBrochureLink: "https://docs.google.com/document/d/1xLShmt-0yh5ORyRwMUaAfzb-_jxr7RcE7aRcKvKlZWw/edit?usp=sharing"
 		},
 		
 		// Cryptic Hunt Events
@@ -103,7 +163,12 @@
 			name: "XCrypt",
 			description: "Dive into mystery, solve intricate puzzles, and prove your mettle. Unlock secrets and become the ultimate Cryptic Hunt champion",
 			type: "Cryptic Hunt",
-			keywords: ["cryptic", "hunt", "puzzles", "mystery", "clues", "solving", "secrets", "riddles"]
+			keywords: ["cryptic", "hunt", "puzzles", "mystery", "clues", "solving", "secrets", "riddles"],
+			eligibility: "Open",
+			teamSize: "1",
+			fullDescription: "Embark on an thrilling journey through cryptic puzzles, hidden clues, and mind-bending challenges. Use logic, creativity, and teamwork to unlock secrets and progress through levels.",
+			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsBrochureLink: null
 		},
 		
 		// Photography Events
@@ -111,7 +176,12 @@
 			name: "XPosure",
 			description: "Capture stories in a single frame. Freeze imagination, emotion, and perspective through the lens with creative photography",
 			type: "Photography",
-			keywords: ["photography", "camera", "creative", "artistic", "visual", "composition", "storytelling", "imagery"]
+			keywords: ["photography", "camera", "creative", "artistic", "visual", "composition", "storytelling", "imagery"],
+			eligibility: "IX-XII",
+			teamSize: "2",
+			fullDescription: "Express your artistic vision through photography. Capture compelling images that tell stories, evoke emotions, and showcase your unique perspective.",
+			prelimsDetails: null,
+			prelimsBrochureLink: "https://docs.google.com/document/d/1nPjMhMUXQNoXFsoOyINFdGk_etv9vigrnWBFryST5P8/edit?usp=sharing"
 		}
 	];
 
@@ -119,6 +189,10 @@
 	let searchTerm = '';
 	let filteredEvents = events;
 	let searchPlaceholder = 'Search events by name, type, or keywords...';
+	
+	// Modal state
+	let selectedEvent = null;
+	let showModal = false;
 	
 	// Image preloading and caching - removed since using gradient backgrounds
 	const imageCache = new Map();
@@ -170,7 +244,31 @@
 		searchTerm;
 		filterEvents();
 	}
+	
+	// Modal functions
+	function openModal(event) {
+		selectedEvent = event;
+		showModal = true;
+		// Prevent body scroll when modal is open
+		document.body.style.overflow = 'hidden';
+	}
+	
+	function closeModal() {
+		showModal = false;
+		selectedEvent = null;
+		// Restore body scroll
+		document.body.style.overflow = 'auto';
+	}
+	
+	// Close modal on escape key
+	function handleKeydown(e) {
+		if (e.key === 'Escape' && showModal) {
+			closeModal();
+		}
+	}
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 <!-- Search Bar -->
 <div class="mb-8 flex justify-center py-12">
@@ -193,6 +291,10 @@
 		<div 
 			class="relative bg-blur rounded-xl overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer group flex flex-col"
 			in:fly="{{ y: 50, duration: 300, delay: Math.min(filteredEvents.indexOf(event) * 100, 800) }}"
+			on:click={() => openModal(event)}
+			on:keydown={(e) => e.key === 'Enter' && openModal(event)}
+			role="button"
+			tabindex="0"
 		>
 			<!-- Background Image -->
 			<div 
@@ -227,5 +329,95 @@
 		</div>
 		<p class="text-white/60 text-lg">No events found matching "{searchTerm}"</p>
 		<p class="text-white/40 text-sm mt-2">Try adjusting your search terms</p>
+	</div>
+{/if}
+
+<!-- Event Details Modal -->
+{#if showModal && selectedEvent}
+	<div 
+		class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+		transition:fade="{{ duration: 200 }}"
+		on:click={closeModal}
+		on:keydown={(e) => e.key === 'Enter' && closeModal()}
+		role="button"
+		tabindex="0"
+	>
+		<div 
+			class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-white/10 shadow-2xl"
+			on:click|stopPropagation
+			on:keydown|stopPropagation
+			role="dialog"
+			aria-modal="true"
+			tabindex="-1"
+			transition:fly="{{ y: 50, duration: 300 }}"
+		>
+			<!-- Modal Header -->
+			<div class="sticky top-0 bg-gradient-to-r  p-6 rounded-t-2xl">
+				<div class="flex justify-between items-start">
+					<div>
+						<h2 class="text-white text-3xl font-bold mb-2">{selectedEvent.name}</h2>
+						<span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">
+							{selectedEvent.type}
+						</span>
+					</div>
+					<button 
+						on:click={closeModal}
+						class="text-white/80 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
+						aria-label="Close modal"
+					>
+						<ion-icon name="close-outline" class="text-3xl"></ion-icon>
+					</button>
+				</div>
+			</div>
+			
+			<!-- Modal Content -->
+			<div class="p-4 space-y-6">
+				<!-- Description -->
+				<div>
+					<p class="text-white/80 leading-relaxed">
+						{selectedEvent.fullDescription}
+					</p>
+				</div>
+				
+				<!-- Eligibility -->
+				<div>
+					<p class="text-white/80">
+						Classes: <span class="text-white font-semibold">{selectedEvent.eligibility}</span>
+					</p>
+				</div>
+				
+				<!-- Team Size -->
+				<div>
+					<p class="text-white/80">
+						{selectedEvent.teamSize} {selectedEvent.teamSize === "1" ? "participant" : "participants"}
+					</p>
+				</div>
+				
+				<!-- Prelims Details -->
+				<div>
+					<h3 class="text-emerald-400 text-lg font-semibold mb-2 flex items-center gap-2">
+						<ion-icon name="trophy-outline"></ion-icon>
+						Preliminary Round Details
+					</h3>
+					{#if selectedEvent.prelimsBrochureLink}
+						<a 
+							href={selectedEvent.prelimsBrochureLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+						>
+							<ion-icon name="document-text-outline"></ion-icon>
+							View Event Prompt
+							<ion-icon name="open-outline" class="text-sm"></ion-icon>
+						</a>
+					{:else if selectedEvent.prelimsDetails}
+						<p class="text-white/80 leading-relaxed">
+							{selectedEvent.prelimsDetails}
+						</p>
+					{/if}
+				</div>
+				
+			</div>
+		</div>
 	</div>
 {/if}
