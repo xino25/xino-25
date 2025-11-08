@@ -51,7 +51,8 @@
 		{ name: "Arnav Gupta", designation: "Vice President 23-24", image: "Arnav Gupta.jpg" },
 		{ name: "Kriti Grover", designation: "Head Design 23-24", image: "Kriti grover.png" },
 		{ name: "Yuvaan Mutreja", designation: "Head Hardware 23-24", image: "yuvaan_3.png" },
-
+		{ name: "Aditya Madan", designation: "Head Development 23-24", image: "aditya madan.png" },
+		
 		// Batch 2022-23
 		{ name: "Anant Gupta", designation: "President 22-23", image: "anant.png" },
 		{ name: "Arnav Shukla", designation: "Head Hardware 22-23", image: "arnav_shukla.png" },
