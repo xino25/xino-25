@@ -18,7 +18,15 @@
 			teamSize: "4",
 			fullDescription: "Xquisite is our flagship event that brings together entrepreneurship, development, and design. Teams must conceptualize and pitch an innovative product complete with a working prototype, UI/UX designs, 2D/3D models, and audio-visual presentation.",
 			prelimsDetails: null,
-			prelimsBrochureLink: "https://docs.google.com/document/d/1yl71rOPIOMnIlx790T-a-vtFFA1AlNiu9C6wWbyO0sw/edit?usp=sharing"
+			prelimsBrochureLink: "https://docs.google.com/document/d/1yl71rOPIOMnIlx790T-a-vtFFA1AlNiu9C6wWbyO0sw/edit?usp=sharing",
+			prelimsResults: [
+				"DPS Vasant Kunj",
+				"DPS RK Puram",
+				"The Mother's International School",
+				"Bal Bharati School, Pitampura",
+				"DPS Dwarka",
+				"DPS Rohini"
+			]
 		},
 		
 		// Discussion Events
@@ -31,7 +39,18 @@
 			teamSize: "1",
 			fullDescription: "A dynamic group discussion event where teams engage in intellectual debates on contemporary topics. Showcase your argumentative skills, critical thinking, and presentation abilities through structured video submissions.",
 			prelimsDetails: null,
-			prelimsBrochureLink: "https://docs.google.com/document/d/13ubWDg99Pe95ARQnxC3lpY0jROIunbozNVJaffYeWRM/edit?usp=sharing"
+			prelimsBrochureLink: "https://docs.google.com/document/d/13ubWDg99Pe95ARQnxC3lpY0jROIunbozNVJaffYeWRM/edit?usp=sharing",
+			prelimsResults: [
+				"DPS RK Puram",
+				"DPS Vasant Kunj",
+				"DPS Noida",
+				"DPS Sushant Lok",
+				"The Mother's International School",
+				"Bal Bharati School, Pitampura",
+				"DPS Dwarka",
+				"Ryan International School, Rohini",
+				"DPS Rohini"
+			]
 		},
 		
 		// Programming Events
@@ -44,7 +63,18 @@
 			teamSize: "1",
 			fullDescription: "Put your coding skills to the ultimate test in this competitive programming challenge. Solve complex algorithmic problems on HackerRank, where every second counts and efficiency matters.",
 			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"DPS RK Puram",
+				"DPS Noida",
+				"Mount Carmel School Dwarka",
+				"DPS Dwarka",
+				"Bal Bharti Public School Pitampura",
+				"Ryan International School, Vasant Kunj",
+				"The Mother's International School",
+				"ORCHIDS The International School, Sonepat",
+				"DPS Rohini"
+			]
 		},
 		
 		// Surprise Events
@@ -57,7 +87,17 @@
 			teamSize: "2",
 			fullDescription: "The ultimate mystery event where anything can happen! Details will be revealed closer to the event date. Prepare for the unexpected and showcase your versatility.",
 			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"DPS Dwarka",
+				"DPS Sushant Lok",
+				"DPS Noida",
+				"DPS International Saket",
+				"The Mother's International School",
+				"DPS Vasant Kunj",
+				"DPS Rohini",
+				"DPS RK Puram"
+			]
 		},
 		
 		// Quiz Events
@@ -70,7 +110,15 @@
 			teamSize: "2",
 			fullDescription: "A comprehensive technology quiz designed for junior students. Test your knowledge across various domains of computer science, technology trends, and digital innovations.",
 			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"DPS RK Puram",
+				"Mother's International",
+				"DPS International",
+				"DPS Noida",
+				"DPS Rohini",
+				"Ryan International, Sec25 Rohini"
+			]
 		},
 		{
 			name: "techXult Sr.",
@@ -81,7 +129,15 @@
 			teamSize: "2",
 			fullDescription: "An advanced technology quiz for senior students covering in-depth topics in computer science, emerging technologies, programming concepts, and tech industry knowledge.",
 			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"DPS RK Puram",
+				"Mother's International",
+				"DPS International",
+				"DPS Mathura Road",
+				"DPS Rohini",
+				"BBPS Pitampura"
+			]
 		},
 		
 		// Cube Solving Events
@@ -94,7 +150,18 @@
 			teamSize: "1",
 			fullDescription: "Speed cubing competition featuring the 2x2 Rubik's cube. Demonstrate your solving speed and technique in this individual competition.",
 			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"Ryan International Rohini",
+				"DPS Vasant Kunj",
+				"DPS Dwarka",
+				"DPS Mathura Road",
+				"DPS RK Puram",
+				"DPS Noida",
+				"DPSI Saket",
+				"Ryan International Vasant Kunj",
+				"DPS Rohini"
+			]
 		},
 		{
 			name: "XCube 3x3",
@@ -105,7 +172,18 @@
 			teamSize: "1",
 			fullDescription: "The classic 3x3 Rubik's cube speed solving competition. Show off your algorithms and finger tricks to secure the fastest times.",
 			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"Ryan International Vasant Kunj",
+				"Mothers International",
+				"Ryan International Rohini",
+				"DPS Vasant Kunj",
+				"DPS Noida",
+				"DPSI Saket",
+				"DPS Mathura Road",
+				"DPS RK Puram",
+				"DPS Rohini"
+			]
 		},
 		{
 			name: "XCube Pyraminx",
@@ -116,7 +194,17 @@
 			teamSize: "1",
 			fullDescription: "Pyraminx speed solving competition. Master this unique triangular puzzle and compete for the best times.",
 			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"Ryan International Rohini",
+				"DPSI Saket",
+				"DPS RK Puram",
+				"DPS Noida",
+				"DPS Vasant Kunj",
+				"DPS Mathura Road",
+				"DPS Dwarka",
+				"DPS Rohini"
+			]
 		},
 		
 		// Film Making Events
@@ -128,8 +216,13 @@
 			eligibility: "IX-XII",
 			teamSize: "4",
 			fullDescription: "Unleash your creativity through the art of filmmaking. Create a compelling short film that tells a story, evokes emotions, and showcases your cinematographic skills.",
-			prelimsDetails: null,
-			prelimsBrochureLink: "https://docs.google.com/document/d/10QOLoxOYT6ro4k2GGuhZ-sKLn7aXYiM4XrNjhbSsM_0/edit?usp=sharing"
+			prelimsDetails: "The suspense is over! We were truly blown away by the creative interpretations submitted in Xframe! The results are in, and we're thrilled to announce the winning teams.",
+			prelimsBrochureLink: "https://docs.google.com/document/d/10QOLoxOYT6ro4k2GGuhZ-sKLn7aXYiM4XrNjhbSsM_0/edit?usp=sharing",
+			prelimsResults: [
+				"DPS Hyderabad (1st Place)",
+				"St Marks, Meera Bagh (2nd Place)",
+				"DPS Sushant Lok (3rd Place)"
+			]
 		},
 		
 		// Robotics Events
@@ -141,7 +234,7 @@
 			eligibility: "VIII-XII",
 			teamSize: "2",
 			fullDescription: "Design and build an autonomous line-following robot that can navigate complex tracks with precision and speed. Test your engineering and programming skills in robotics.",
-			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
+			prelimsDetails: "There are no prelims for this event. The final will be held offline on 13 November 2025.",
 			prelimsBrochureLink: null
 		},
 		
@@ -167,8 +260,13 @@
 			eligibility: "Open",
 			teamSize: "1",
 			fullDescription: "Embark on an thrilling journey through cryptic puzzles, hidden clues, and mind-bending challenges. Use logic, creativity, and teamwork to unlock secrets and progress through levels.",
-			prelimsDetails: "Prelims will be conducted online. Further details will be shared on the Discord server.",
-			prelimsBrochureLink: null
+			prelimsDetails: "",
+			prelimsBrochureLink: null,
+			prelimsResults: [
+				"DPS Vasant Kunj (1st Place)",
+				"DPS RK Puram (2nd Place)",
+				"DPS Sushant Lok (3rd Place)"
+			]
 		},
 		
 		// Photography Events
@@ -180,8 +278,16 @@
 			eligibility: "IX-XII",
 			teamSize: "2",
 			fullDescription: "Express your artistic vision through photography. Capture compelling images that tell stories, evoke emotions, and showcase your unique perspective.",
-			prelimsDetails: null,
-			prelimsBrochureLink: "https://docs.google.com/document/d/1nPjMhMUXQNoXFsoOyINFdGk_etv9vigrnWBFryST5P8/edit?usp=sharing"
+			prelimsDetails: "The suspense is over! We were truly blown away by the creative interpretations submitted in the Preliminary Round of XPosure. The results are in, and we're thrilled to announce the photographers moving on to the final round on Thursday, 13 November 2025.",
+			prelimsBrochureLink: "https://docs.google.com/document/d/1nPjMhMUXQNoXFsoOyINFdGk_etv9vigrnWBFryST5P8/edit?usp=sharing",
+			prelimsResults: [
+				"DPS RK Puram",
+				"Ryan International, Rohini-25",
+				"DPS Dwarka",
+				"St Marks, Meera Bagh",
+				"DPS Noida, S-30",
+				"DPS Rohini"
+			]
 		}
 	];
 
@@ -352,7 +458,7 @@
 			transition:fly="{{ y: 50, duration: 300 }}"
 		>
 			<!-- Modal Header -->
-			<div class="sticky top-0 bg-gradient-to-r  p-6 rounded-t-2xl">
+			<div class="sticky top-0 bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-t-2xl">
 				<div class="flex justify-between items-start">
 					<div>
 						<h2 class="text-white text-3xl font-bold mb-2">{selectedEvent.name}</h2>
@@ -416,6 +522,39 @@
 						</p>
 					{/if}
 				</div>
+				
+				<!-- Prelims Results -->
+				{#if selectedEvent.prelimsResults && selectedEvent.prelimsResults.length > 0}
+				<div>
+					<h3 class="text-emerald-400 text-lg font-semibold mb-3 flex items-center gap-2">
+						<ion-icon name="ribbon-outline"></ion-icon>
+						{#if selectedEvent.name === "XCrypt" || selectedEvent.name === "XFrame"}
+							Winners
+						{:else}
+							Qualified Teams
+						{/if}
+					</h3>
+					{#if selectedEvent.name !== "XCrypt" && selectedEvent.name !== "XFrame"}
+						<p class="text-white/60 text-sm mb-3 italic">In no particular order</p>
+					{/if}
+					<div class="bg-white/5 rounded-lg p-4 border border-emerald-500/20">
+						<ul class="space-y-2">
+							{#each selectedEvent.prelimsResults as school, index}
+								<li class="flex items-center gap-3 text-white/90">
+									{#if selectedEvent.name === "XCrypt" || selectedEvent.name === "XFrame"}
+										<span class="flex-shrink-0 w-6 h-6 bg-emerald-600/30 rounded-full flex items-center justify-center text-emerald-300 text-sm font-semibold">
+											{index + 1}
+										</span>
+									{:else}
+										<span class="flex-shrink-0 w-2 h-2 bg-emerald-500 rounded-full"></span>
+									{/if}
+									<span>{school}</span>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				</div>
+				{/if}
 				
 			</div>
 		</div>
