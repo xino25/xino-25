@@ -7,37 +7,43 @@
 	import { onMount } from 'svelte';
 	
 	let currentView = 'members'; // 'members' or 'alumni'
-	let imageCache = new Map(); // Cache for preloaded images
-	let loadingStates = new Map(); // Track loading states
 
-	// Sample members data - replace with actual data
+	// Members data
 	const members = [
 		// Core Team
-		{ name: 'Udbhav Jha', designation: 'President' },
-		{ name: 'Vihaan Kulkarni', designation: 'President' },
-		{ name: 'Aarav Rajpal', designation: 'Vice President' },
-		{ name: 'Avni Tiwari', designation: 'Vice President' },
-		{ name: 'Ruhaan Gilautra', designation: 'Secretary' },
-		{ name: 'Laksh Kapoor', designation: 'Secretary' },
+		{ name: 'Aarav Rajpal',   designation: 'President',       image: 'aarav_rajpal.jpeg'  },
+		{ name: 'Rishit Narang',  designation: 'Vice President',  image: 'rishit_goat.jpg'   },
+		{ name: 'Akshar Gupta',   designation: 'Vice President',  image: 'akshar.jpeg'        },
+		{ name: 'Archita Tiwari', designation: 'Secretary',       image: 'archita.jpg'        },
+		{ name: 'Param Sen',      designation: 'Secretary',       image: 'param sen.jpg'      },
 
 		// Heads of Departments
-		{ name: 'Rishit Narang', designation: 'Head Programming' },
-		{ name: 'Arnav Bhargava', designation: 'Head Surprise' },
- 		// { name: 'Arul Gandhi', designation: 'Head Hardware' },
-		 { name: 'Bhavya SK', designation: 'Head Quiz' },
-		{ name: 'Param Sen', designation: 'Head Crossword' },
-		{ name: 'Akshar Gupta', designation: 'Head Machine Learning' },
-		
+		{ name: 'Mayank Swami',     designation: 'Head Programming', image: 'mayank.jpg'    },
+		{ name: 'Rythm Khatri',     designation: 'Head Surprise',    image: 'default.png'   },
+		{ name: 'Aran Mandal',      designation: 'Head Cubing',      image: 'default.png'   },
+		{ name: 'Yovan Sethi',      designation: 'Head Design',      image: 'default.png'   },
+		{ name: 'Harshit Malhotra', designation: 'Head A/V',         image: 'harshit.jpg'   },
+
 		// Members
-		// { name: 'Rishit Soneja', designation: 'Member' },
-		{ name: 'Harshit Malhotra', designation: 'Member' },
-		{ name: 'Arnav Jain', designation: 'Member' },
-		{ name: 'Mayank Swami', designation: 'Member' },
-		{ name: 'Archita Tiwari', designation: 'Member' },
+		{ name: 'Vivaan Bansal', designation: 'Executive Member', image: 'default.jpg'      },
+		{ name: 'Manit Gupta',       designation: 'Member', image: 'default.jpg'  },
+		{ name: 'Arnav Jain',     designation: 'Member', image: 'arnav jain.jpeg'       },
+		{ name: 'Aarav Tulsani',   designation: 'Member', image: 'default.jpg'      },
 	];
 
 	// Sample alumni data - replace with actual data
 	const alumni = [
+
+
+		// Batch 2025-26
+		{ name: "Udbhav Jha", designation: "President 25-26", image: "udbhav.jpg" },
+		{ name: "Vihaan Kulkarni", designation: "President 25-26", image: "vihaan_kulkarni.png" },
+		{ name: "Avni Tiwari", designation: "Vice President 25-26", image: "avni_tiwari.jpg" },
+		{ name: "Ruhaan Gilautra", designation: "Vice President 25-26", image: "ruhaan.jpg" },
+		{ name: "Laksh Kapoor", designation: "Secretary 25-26", image: "laksh.jpg" },
+		{ name: "Arnav Bhargava", designation: "Head Surprise 25-26", image: "arnav bhargava.jpg" },
+		
+
 		// Batch 2024-25
 		{ name: "Anirudh Dabas", designation: "President 24-25", image: "anirudh.jpg" },
 		{ name: "Akshatt Dahiya", designation: "Vice President 24-25", image: "akshatt_n.png" },
@@ -70,47 +76,10 @@
 		currentView = view;
 	}
 
-	function getImageName(name) {
-		// Create mapping for known images
-		const imageMap = {
-			'Udbhav Jha': 'udbhav.jpg',
-			'Vihaan Kulkarni': 'vihaan_kulkarni.png',
-			'Dhruv Dewan': 'dhruv dewan_2.jpg',
-			'Aarav Rajpal': 'aarav_rajpal.jpg',
-			'Avni Tiwari': 'avni_tiwari.jpg',
-			'Laksh Kapoor': 'laksh.jpg',
-			'Rishit Narang': 'rishit_goat.jpg',
-			'Avi Rana': 'avi_rana.jpg',
-			'Tejas Jain': 'tejas_jain.jpg',
-			'Ruhaan Gilautra': 'ruhaan.jpg',
-			'Bhavya SK': 'bhavya_sk.jpg',
-			'Harshit Malhotra': 'harshit.jpg',
-			'Mayank Swami': 'mayank.jpg',
-			'Akshar Gupta': 'akshar.jpeg',
-			'Arnav Jain': 'arnav jain.jpeg',
-			'Arnav Bhargava': 'arnav bhargava.jpg',
-			'Param Sen': 'param sen.jpg',
-			'Archita Tiwari': 'archita.jpg'
-		};
-		
-		return imageMap[name] || 'default.png';
-	}
-
-	function getAlumniImagePath(person) {
-		// For alumni, use the provided image filename
-		return person.image ? `/alumni/${person.image}` : '/alumni/default.png';
-	}
-
-
-
-	// Enhanced image loading with cache
 	function getImageSrc(person) {
-		const src = currentView === 'members' 
-			? `/members/${getImageName(person.name)}` 
-			: getAlumniImagePath(person);
-		
-		// Return cached image if available, otherwise return src for normal loading
-		return  src;
+		const folder = currentView === 'members' ? '/members' : '/alumni';
+		const fallback = `${folder}/default.png`;
+		return person.image ? `${folder}/${person.image}` : fallback;
 	}
 </script>
 
@@ -176,11 +145,8 @@
 						loading="lazy"
 						decoding="async"
 						on:error={(e) => {
-							// Enhanced error handling with proper fallback
-							const defaultSrc = currentView === 'members' ? '/members/default.png' : '/alumni/default.png';
-							if (e.target.src !== defaultSrc) {
-								e.target.src = defaultSrc;
-							}
+							const defaultSrc = `/${currentView === 'members' ? 'members' : 'alumni'}/default.png`;
+							if (e.target.src !== defaultSrc) e.target.src = defaultSrc;
 						}}
 					/>
 					
