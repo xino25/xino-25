@@ -27,7 +27,7 @@
 		// Members
 		{ name: 'Vivaan Bansal', designation: 'Executive Member', image: 'default.jpg'      },
 		{ name: 'Manit Gupta',       designation: 'Member', image: 'manit.png'  },
-		{ name: 'Arnav Jain',     designation: 'Member', image: 'arnav jain haha.jpeg'       },
+		{ name: 'Arnav Jain',     designation: 'Member', image: 'arnav jain.jpeg'       },
 		{ name: 'Aarav Tulsani',   designation: 'Member', image: 'default.jpg'      },
 	];
 
