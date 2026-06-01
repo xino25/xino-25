@@ -19,7 +19,7 @@
 
 		// Heads of Departments
 		{ name: 'Mayank Swami',     designation: 'Head Programming', image: 'mayank.jpg'    },
-		{ name: 'Rythm Khatri',     designation: 'Head Surprise',    image: 'default.png'   },
+		{ name: 'Rhythm Khatri',     designation: 'Head Surprise',    image: 'default.png'   },
 		{ name: 'Aran Mandal',      designation: 'Head Cubing',      image: 'default.png'   },
 		{ name: 'Yovan Sethi',      designation: 'Head Design',      image: 'default.png'   },
 		{ name: 'Harshit Malhotra', designation: 'Head A/V',         image: 'harshit.jpg'   },
