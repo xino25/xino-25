@@ -25,8 +25,8 @@
 		{ name: 'Harshit Malhotra', designation: 'Head A/V',         image: 'harshit.jpg'   },
 
 		// Members
-		{ name: 'Vivaan Bansal', designation: 'Executive Member', image: 'default.jpg'      },
 		{ name: 'Arnav Jain',     designation: 'Executive Member', image: 'arnav jain haha.jpeg'       },
+		{ name: 'Vivaan Bansal', designation: 'Executive Member', image: 'default.jpg'      },
 		{ name: 'Manit Gupta',       designation: 'Member', image: 'manit.png'  },
 		{ name: 'Aarav Tulsani',   designation: 'Member', image: 'default.jpg'      },
 	];
