@@ -21,14 +21,14 @@
 		{ name: 'Mayank Swami',     designation: 'Head Programming', image: 'mayank.jpg'    },
 		{ name: 'Rhythm Khatri',     designation: 'Head Surprise',    image: 'rhythm khatri.jpeg'   },
 		{ name: 'Aran Mandal',      designation: 'Head Cubing',      image: 'default.png'   },
-		{ name: 'Yovan Sethi',      designation: 'Head Design',      image: 'default.png'   },
+		{ name: 'Yovan Sethi',      designation: 'Head Design',      image: 'yovaan sethi.jpeg'   },
 		{ name: 'Harshit Malhotra', designation: 'Head A/V',         image: 'harshit.jpg'   },
 
 		// Members
 		{ name: 'Arnav Jain',     designation: 'Executive Member', image: 'arnav jain.jpeg'       },
 		{ name: 'Vivaan Bansal', designation: 'Executive Member', image: 'default.jpg'      },
 		{ name: 'Manit Gupta',       designation: 'Member', image: 'manit.png'  },
-		{ name: 'Aarav Tulsani',   designation: 'Member', image: 'default.jpg'      },
+		{ name: 'Aarav Tulsani',   designation: 'Member', image: 'aarav tulsani.jpeg'      },
 	];
 
 	// Sample alumni data - replace with actual data
