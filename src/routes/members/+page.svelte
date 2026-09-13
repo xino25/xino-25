@@ -61,13 +61,15 @@
 		
 		// Batch 2022-23
 		{ name: "Anant Gupta", designation: "President 22-23", image: "anant.png" },
-		{ name: "Arnav Shukla", designation: "Head Hardware 22-23", image: "arnav_shukla.png" },
 
 		// Batch 2021-22
 		{ name: "Shaurya Bajaj", designation: "President 21-22", image: "shaurya bajaj.png" },
 		{ name: "Manit Kaushik", designation: "President 21-22", image: "manit kaushik.png" },
 		{ name: "Moaksh Kakkar", designation: "Vice President 21-22", image: "moaksh kakkar.png" },
-		{ name: "Shaunak Sachdev", designation: "Vice President 21-22", image: "shaunak sachdev.png" }
+		{ name: "Shaunak Sachdev", designation: "Vice President 21-22", image: "shaunak sachdev.png" },
+
+		// Batch 2020-21
+		{ name: "Arnav Shukla", designation: "Head Hardware 20-21", image: "arnav_shukla.png" }
 	];
 
 	$: currentData = currentView === 'members' ? members : alumni;
